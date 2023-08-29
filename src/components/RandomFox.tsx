@@ -12,7 +12,7 @@ interface ImageProps {
 export const RandomFox = ({ image, alt }: ImageProps): JSX.Element => {
   return (
     <div>
-      <img width={320} height='auto' src={image} alt={alt} className="rounded" />
+      <img width={320} height='auto' src={image} alt={alt} className='rounded' />
     </div>
   )
 }
