@@ -22,10 +22,16 @@ export default function Home (): JSX.Element {
     }
 
     setImages([...images, newImageItem])
+    window.plausible('add_fox', { props: { foxId: newImageItem.id } })
   }
 
   return (
     <main className='flex min-h-screen flex-col items-center justify-center p-24 gap-3'>
+      <script
+        defer
+        data-domain='yourdomain.com'
+        src='https://plausible.io/js/script.js'
+      />
       <h1 className='text-5xl font-medium'>Hello world</h1>
       <button onClick={addNewFox}>Add new fox</button>
       {images.map(({ id, imageUrl }, index) => (
