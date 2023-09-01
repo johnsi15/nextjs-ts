@@ -27,7 +27,7 @@ export default function Home (): JSX.Element {
     <main className='flex min-h-screen flex-col items-center justify-center p-24 gap-3'>
       <h1 className='text-5xl font-medium'>Hello world</h1>
       <button onClick={addNewFox}>Add new fox</button>
-      {images.map(({ id, imageUrl }) => (
+      {images.map(({ id, imageUrl }, index) => (
         <div key={id} className='p-4'>
           <LazyImage
             src={imageUrl}
@@ -35,6 +35,7 @@ export default function Home (): JSX.Element {
             width={320} height='auto'
             className='rounded-md bg-gray-400'
             onClick={() => console.log('hello...')}
+            onLazyLoad={(img) => console.log(`Image #${index + 1} cargada. Nodo:`, img)}
           />
         </div>
       ))}
