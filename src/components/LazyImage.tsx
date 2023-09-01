@@ -43,7 +43,7 @@ export function LazyImage ({ src, onLazyLoad, ...imgProps }: ImageProps): JSX.El
 
         if (typeof onLazyLoad === 'function') {
           onLazyLoad(node.current)
-          console.log('onLazyLoad')
+          // console.log('onLazyLoad')
         }
       })
     })

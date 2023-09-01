@@ -3,8 +3,7 @@
 import { useState } from 'react'
 import type { MouseEventHandler } from 'react'
 import { LazyImage } from '../components/LazyImage'
-
-interface ImageItem { id: string, imageUrl: string }
+import type { ImageItem } from '../app'
 
 const randomNumber = (): number => Math.floor(Math.random() * 123) + 1
 const generateId = (): string => Math.random().toString(36).substring(2, 15)
