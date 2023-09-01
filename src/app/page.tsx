@@ -4,8 +4,10 @@ import { useState } from 'react'
 import type { MouseEventHandler } from 'react'
 import { LazyImage } from '../components/LazyImage'
 import type { ImageItem } from '../app'
+import { random } from 'lodash'
 
-const randomNumber = (): number => Math.floor(Math.random() * 123) + 1
+// const randomNumber = (): number => Math.floor(Math.random() * 123) + 1
+const randomNumber = (): number => random(1, 123)
 const generateId = (): string => Math.random().toString(36).substring(2, 15)
 
 export default function Home (): JSX.Element {
